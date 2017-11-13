@@ -18,7 +18,7 @@ var w_conversation = watson.conversation({
     version: 'v1',
     version_date: '2016-07-11'
 });
-var workspace = process.env.WORKSPACE_ID || '67ed865e-cb58-45b1-9ee9-9c4b159dbc68';
+var workspace = process.env.WORKSPACE_ID || '';
 
 app.get('/webhook/', function (req, res) {
     if (req.query['hub.verify_token'] === 'TokenWorkChatTPT') {
@@ -218,7 +218,7 @@ function sendMessage(sender, text_) {
     });
 };
 
-var token = "DQVJ0NERWWDZAlSlQ1VXlYazJsY04xanljMXdENG9yWFd6UE9vSFcxVC1PYTlubWFxam9pTXY0NGxVd05jbk9TcjZAjUEJoQlVjTzl3NWJrTk5KMWY5bnA2eWdORDRBa01PWEZAVdjFtTkVTVHFOSXd4NVBRY1ZA2eDhlT0ZAGNUoxOF9ZAbmlid1U3SWlnd0VrM2xWNmhITTB1c2dMSF9pUUl0ODdTVk5FRER4NEhZAMGk1U0FmTU9TcmZAvbXVlNk4yRWNKRkpId0dGWUkzODBSMFlnSgZDZD";
+var token = "";
 var host = (process.env.VCAP_APP_HOST || 'localhost');
 var port = (process.env.VCAP_APP_PORT || 3000);
 app.listen(port, host);
